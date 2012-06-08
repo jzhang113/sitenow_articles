@@ -1,0 +1,11 @@
+name = SiteNow Articles Content
+description = Content for SiteNow Articles Feature
+core = 7.x
+package = SiteNow Content
+php = 5.2.4
+version = 7.x-1.0
+project = sitenow_articles_content
+features[content][] = article_1
+features[content][] = article_2
+features[features_api][] = api:1
+project status url = http://dev.sitenow.uiowa.edu/features/fserver

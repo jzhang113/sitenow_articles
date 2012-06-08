@@ -1,0 +1,9 @@
+<?php
+/**
+ * @file
+ * Code for the SiteNow Articles feature.
+ */
+
+include_once 'sitenow_articles.features.inc';
+
+drupal_add_css(drupal_get_path('module', 'sitenow_articles') . '/css/sitenow_articles.css');
