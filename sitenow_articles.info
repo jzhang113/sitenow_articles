@@ -54,4 +54,3 @@ features[variable][] = panelizer_node:article_allowed_types
 features[variable][] = panelizer_node:article_default
 features[variable][] = pathauto_node_article_pattern
 features[views_view][] = articles
-project status url = http://dev.sitenow.uiowa.edu/features/fserver
