@@ -35,7 +35,7 @@ function sitenow_articles_views_api() {
 function sitenow_articles_image_default_styles() {
   $styles = array();
 
-  // Exported image style: articles_img_left
+  // Exported image style: articles_img_left.
   $styles['articles_img_left'] = array(
     'name' => 'articles_img_left',
     'effects' => array(
@@ -57,7 +57,7 @@ function sitenow_articles_image_default_styles() {
     ),
   );
 
-  // Exported image style: articles_img_top
+  // Exported image style: articles_img_top.
   $styles['articles_img_top'] = array(
     'name' => 'articles_img_top',
     'effects' => array(

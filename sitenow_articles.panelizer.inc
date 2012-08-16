@@ -55,7 +55,7 @@ function sitenow_articles_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-1';
     $pane->panel = 'contentmain';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
@@ -81,10 +81,10 @@ function sitenow_articles_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = '';
-    $display->content['new-3'] = $pane;
-    $display->panels['contentmain'][0] = 'new-3';
+    $display->content['new-1'] = $pane;
+    $display->panels['contentmain'][0] = 'new-1';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-2';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_tags';
@@ -109,10 +109,10 @@ function sitenow_articles_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar'][0] = 'new-4';
+    $display->content['new-2'] = $pane;
+    $display->panels['sidebar'][0] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-3';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';
     $pane->subtype = 'articles-panel_pane_article_tags';
@@ -141,10 +141,10 @@ function sitenow_articles_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['sidebar'][1] = 'new-5';
+    $display->content['new-3'] = $pane;
+    $display->panels['sidebar'][1] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-4';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';
     $pane->subtype = 'articles-panel_pane_article_recent';
@@ -175,10 +175,10 @@ function sitenow_articles_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['sidebar'][2] = 'new-6';
+    $display->content['new-4'] = $pane;
+    $display->panels['sidebar'][2] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-3';
+  $display->title_pane = 'new-1';
   $panelizer->display = $display;
   $export['node:article:default'] = $panelizer;
 
