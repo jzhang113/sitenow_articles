@@ -21,7 +21,7 @@ function sitenow_articles_default_page_manager_pages() {
     'type' => 'none',
     'title' => '',
     'name' => 'main-menu',
-    'weight' => '',
+    'weight' => '0',
     'parent' => array(
       'type' => 'none',
       'title' => '',
