@@ -71,7 +71,7 @@ function sitenow_articles_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Aricles';
+  $display->title = 'Articles';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
