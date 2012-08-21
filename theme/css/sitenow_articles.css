@@ -1,63 +1,28 @@
-.field-name-field-tags ul { list-style-type:none; }
-.field-name-field-tags ul li {
-  display:block;
-  float:left;
-  padding:0;
-  list-style:none;
-}
-.field-name-field-tags ul li a {
-  background:#f1f1f1;
-  padding:.3em 1em;
-  -webkit-border-radius:5px;
-  -moz-border-radius:5px;
-  border-radius:5px;
-  border:1px solid #dddddd;
-  text-transform:uppercase;
-  font-size:.7em;
-}
+/*
+ * @file
+ * sitenow_articles
+ *
+ * - styles related for basic theming of sitenow_articles. Color and other customizations should take place at a higher level
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/modules\/features\/sitenow_articles\/theme\/sass\/sitenow_articles\.scss}line{font-family:\0000315}}
 .view-articles .views-row {
-  padding:5px;
-  border-bottom:1px solid #eeeeee;
-  margin-bottom: 10px;
+  overflow: hidden;
+  *zoom: 1;
 }
-
-.views-field.views-field-field-image-1 {
-	float: left;
-	margin-right: 20px;
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/modules\/features\/sitenow_articles\/theme\/sass\/sitenow_articles\.scss}line{font-family:\0000319}}
+.view-articles .views-field-field-image-1 {
+  float: left;
+  margin-right: 20px;
 }
-
-.view-articles img {
-  border:1px solid #cccccc;
-  padding:3px;
-  background:#ffffff;
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/modules\/features\/sitenow_articles\/theme\/sass\/sitenow_articles\.scss}line{font-family:\0000324}}
+.view-articles .views-field-title {
+  margin: 0 0 .5em;
 }
-.view-articles .views-field-field-image-1 a, .view-articles .views-field-field-image a {
-  display:block;
-  line-height:0;
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/modules\/features\/sitenow_articles\/theme\/sass\/sitenow_articles\.scss}line{font-family:\0000328}}
+.view-articles .views-field-created {
+  margin: 0 0 .5em;
 }
-
-.views-field h3 {
-	margin: 0 0 .5em;
-}
-
-.views-field-created {
-	margin: 0 0 .5em;
-}
-.views-label-created {
-	font-weight: bold;
-}
-
-.view-display-id-panel_pane_articles_achive_links .item-list ul {
-  margin:0;
-  list-style-type:none;
-  zoom:1;
-}
-.view-display-id-panel_pane_articles_achive_links .item-list ul:after {
-  content:"";
-  display:table;
-  clear:both;
-}
-.view-display-id-panel_pane_articles_achive_links .item-list ul li {
-  margin:0;
-  border-bottom:1px solid #dddddd;
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/modules\/features\/sitenow_articles\/theme\/sass\/sitenow_articles\.scss}line{font-family:\0000331}}
+.view-articles .views-field-created .views-label-created {
+  font-weight: bold;
 }
