@@ -473,7 +473,6 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['title'] = 'Monthly Archive';
   $handler->display->display_options['display_description'] = 'Links to monthly archive for Articles panel page';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'View More Articles';
   $handler->display->display_options['link_url'] = 'articles';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
