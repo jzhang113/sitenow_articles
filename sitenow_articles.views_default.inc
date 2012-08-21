@@ -187,6 +187,7 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Recent Articles';
   $handler->display->display_options['display_description'] = 'All recent articles content pane';
+  $handler->display->display_options['link_url'] = 'articles';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -246,6 +247,7 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Related Articles';
   $handler->display->display_options['display_description'] = 'Articles by Audience and Tags';
+  $handler->display->display_options['link_url'] = 'articles';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -470,6 +472,8 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Monthly Archive';
   $handler->display->display_options['display_description'] = 'Links to monthly archive for Articles panel page';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'View More Articles';
   $handler->display->display_options['link_url'] = 'articles';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';

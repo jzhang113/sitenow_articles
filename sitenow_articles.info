@@ -12,6 +12,7 @@ dependencies[] = options
 dependencies[] = page_manager
 dependencies[] = panelizer
 dependencies[] = sitenow_core
+dependencies[] = sitenow_featured_slider
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = views
