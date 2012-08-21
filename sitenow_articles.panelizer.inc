@@ -37,10 +37,10 @@ function sitenow_articles_panelizer_defaults() {
       'id' => 1,
     ),
   );
-  $panelizer->did = 3;
+  $panelizer->did = 1;
   $panelizer->access = '';
   $display = new panels_display();
-  $display->layout = 'bryant_flipped_flipped';
+  $display->layout = 'whelan';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -48,6 +48,9 @@ function sitenow_articles_panelizer_defaults() {
       'center' => NULL,
       'sidebar' => NULL,
       'contentmain' => NULL,
+      'header' => NULL,
+      'column1' => NULL,
+      'column2' => NULL,
     ),
   );
   $display->cache = array();
@@ -56,22 +59,16 @@ function sitenow_articles_panelizer_defaults() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'contentmain';
-    $pane->type = 'node_content';
-    $pane->subtype = 'node_content';
+    $pane->panel = 'column1';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'links' => 1,
-      'page' => 1,
-      'no_extras' => 0,
-      'override_title' => 0,
-      'override_title_text' => '<none>',
-      'identifier' => '',
       'link' => 0,
-      'leave_node_title' => 0,
       'context' => 'panelizer',
-      'build_mode' => 'full',
+      'override_title' => 1,
+      'override_title_text' => '<none>',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -80,12 +77,66 @@ function sitenow_articles_panelizer_defaults() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['contentmain'][0] = 'new-1';
+    $display->panels['column1'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'sidebar';
+    $pane->panel = 'column1';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_image';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'image',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'image_style' => 'articles_img_top',
+        'image_link' => '',
+      ),
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['column1'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'column1';
+    $pane->type = 'node_created';
+    $pane->subtype = 'node_created';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'format' => 'long',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => 'Published On:',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['column1'][2] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'column2';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_tags';
     $pane->shown = TRUE;
@@ -109,11 +160,11 @@ function sitenow_articles_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['sidebar'][0] = 'new-2';
+    $display->content['new-4'] = $pane;
+    $display->panels['column2'][0] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'sidebar';
+    $pane->pid = 'new-5';
+    $pane->panel = 'column2';
     $pane->type = 'views_panes';
     $pane->subtype = 'articles-panel_pane_article_tags';
     $pane->shown = TRUE;
@@ -141,31 +192,26 @@ function sitenow_articles_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['sidebar'][1] = 'new-3';
+    $display->content['new-5'] = $pane;
+    $display->panels['column2'][1] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'sidebar';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'articles-panel_pane_article_recent';
+    $pane->pid = 'new-6';
+    $pane->panel = 'contentmain';
+    $pane->type = 'node_content';
+    $pane->subtype = 'node_content';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'more_link' => 1,
-      'use_pager' => 0,
-      'pager_id' => '',
-      'items_per_page' => '5',
-      'fields_override' => array(
-        'nid' => 0,
-        'field_image' => 0,
-        'field_image_1' => 0,
-        'title' => 1,
-        'name' => 0,
-        'created' => 0,
-        'body' => 0,
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
+      'links' => 1,
+      'page' => 1,
+      'no_extras' => 0,
+      'override_title' => 1,
+      'override_title_text' => '<none>',
+      'identifier' => '',
+      'link' => 0,
+      'leave_node_title' => 0,
+      'context' => 'panelizer',
+      'build_mode' => 'full',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -173,12 +219,12 @@ function sitenow_articles_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar'][2] = 'new-4';
+    $pane->position = 0;
+    $pane->locks = '';
+    $display->content['new-6'] = $pane;
+    $display->panels['contentmain'][0] = 'new-6';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-6';
   $panelizer->display = $display;
   $export['node:article:default'] = $panelizer;
 

@@ -50,7 +50,7 @@ function sitenow_articles_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => '0',
         ),
         'ical' => array(
           'label' => 'above',
@@ -114,7 +114,7 @@ function sitenow_articles_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => FALSE,
+        'default_image' => 0,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -123,17 +123,13 @@ function sitenow_articles_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'article',
       'deleted' => '0',
-      'description' => 'Upload an image to go with this article.',
+      'description' => 'Featured Image is image associated to this article that is used across your website. Featured Image is not automatically inserted into your article, but can be placed using the media browser in your WYSIWYG. ',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'large',
-          ),
-          'type' => 'image',
-          'weight' => '0',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '2',
         ),
         'ical' => array(
           'label' => 'above',
@@ -154,20 +150,21 @@ function sitenow_articles_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_image',
-      'label' => 'Image',
-      'required' => FALSE,
+      'label' => 'Featured Image',
+      'required' => 0,
       'settings' => array(
-        'alt_field' => TRUE,
+        'alt_field' => 1,
         'default_image' => 0,
         'file_directory' => 'field/image',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
         'min_resolution' => '',
-        'title_field' => '',
+        'title_field' => 1,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
+        'active' => 1,
         'module' => 'image',
         'settings' => array(
           'preview_image_style' => 'thumbnail',
@@ -223,7 +220,7 @@ function sitenow_articles_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '2',
+          'weight' => '1',
         ),
         'ical' => array(
           'label' => 'above',
@@ -261,10 +258,10 @@ function sitenow_articles_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Image');
+  t('Featured Image');
+  t('Featured Image is image associated to this article that is used across your website. Featured Image is not automatically inserted into your article, but can be placed using the media browser in your WYSIWYG. ');
   t('Provide keywords to relate content. Multiple values are allowed. Separate keywords with a comma.');
   t('Tags');
-  t('Upload an image to go with this article.');
 
   return $fields;
 }
