@@ -84,7 +84,7 @@ function sitenow_articles_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '1',
+        'weight' => '2',
       ),
       'widget_type' => 'text_textarea_with_summary',
     ),
@@ -171,7 +171,7 @@ function sitenow_articles_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '2',
+        'weight' => '1',
       ),
     ),
   );
@@ -250,7 +250,7 @@ function sitenow_articles_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '31',
+        'weight' => '3',
       ),
     ),
   );
