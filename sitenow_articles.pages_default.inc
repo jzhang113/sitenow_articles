@@ -86,12 +86,9 @@ function sitenow_articles_default_page_manager_pages() {
       'pager_id' => '0',
       'items_per_page' => '10',
       'fields_override' => array(
-        'nid' => 0,
-        'field_image' => 0,
         'field_image_1' => 1,
         'title' => 1,
-        'name' => 1,
-        'created' => 1,
+        'created' => 0,
         'body' => 1,
       ),
       'override_title' => 0,
