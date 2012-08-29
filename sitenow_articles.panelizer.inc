@@ -37,8 +37,11 @@ function sitenow_articles_panelizer_defaults() {
       'id' => 1,
     ),
   );
-  $panelizer->did = 1;
   $panelizer->access = '';
+  $panelizer->view_mode = '';
+  $panelizer->css_class = '';
+  $panelizer->title_element = 'H2';
+  $panelizer->link_to_entity = TRUE;
   $display = new panels_display();
   $display->layout = 'whelan';
   $display->layout_settings = array();

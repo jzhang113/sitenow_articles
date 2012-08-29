@@ -29,6 +29,7 @@ features[image][] = articles_img_left
 features[image][] = articles_img_top
 features[node][] = article
 features[page_manager_pages][] = articles
+features[panelizer_defaults][] = node:article:default
 features[taxonomy][] = tags
 features[user_permission][] = create article content
 features[user_permission][] = delete any article content
