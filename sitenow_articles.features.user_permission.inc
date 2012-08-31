@@ -10,6 +10,63 @@
 function sitenow_articles_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: administer panelizer node article content.
+  $permissions['administer panelizer node article content'] = array(
+    'name' => 'administer panelizer node article content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'webmaster',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: administer panelizer node article context.
+  $permissions['administer panelizer node article context'] = array(
+    'name' => 'administer panelizer node article context',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: administer panelizer node article defaults.
+  $permissions['administer panelizer node article defaults'] = array(
+    'name' => 'administer panelizer node article defaults',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: administer panelizer node article layout.
+  $permissions['administer panelizer node article layout'] = array(
+    'name' => 'administer panelizer node article layout',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'webmaster',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: administer panelizer node article overview.
+  $permissions['administer panelizer node article overview'] = array(
+    'name' => 'administer panelizer node article overview',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'webmaster',
+    ),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: administer panelizer node article settings.
+  $permissions['administer panelizer node article settings'] = array(
+    'name' => 'administer panelizer node article settings',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'panelizer',
+  );
+
   // Exported permission: create article content.
   $permissions['create article content'] = array(
     'name' => 'create article content',
@@ -43,6 +100,16 @@ function sitenow_articles_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: delete terms in 1.
+  $permissions['delete terms in 1'] = array(
+    'name' => 'delete terms in 1',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'webmaster',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: edit any article content.
   $permissions['edit any article content'] = array(
     'name' => 'edit any article content',
@@ -63,6 +130,17 @@ function sitenow_articles_user_default_permissions() {
       2 => 'webmaster',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: edit terms in 1.
+  $permissions['edit terms in 1'] = array(
+    'name' => 'edit terms in 1',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+      2 => 'webmaster',
+    ),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: enter article revision log entry.
