@@ -53,7 +53,6 @@ function sitenow_articles_user_default_permissions() {
     'name' => 'administer panelizer node article overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'webmaster' => 'webmaster',
     ),
     'module' => 'panelizer',
   );
