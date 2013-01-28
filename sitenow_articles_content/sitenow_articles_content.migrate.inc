@@ -79,14 +79,3 @@ class SiteNowArticlesMigration extends Migration {
     return $columns;
   }
 }
-
-/**
- * BatchAPI callback.
- *
- * @see sitenow_articles_content_install()
- */
-function _sitenow_articles_content_import($operation, $type, &$context) {
-  $context['message'] = t('@operation', array('@operation' => $type));
-  $migration =  Migration::getInstance($operation);
-  $migration->processImport();
-}
