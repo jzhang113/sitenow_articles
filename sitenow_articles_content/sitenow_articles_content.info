@@ -3,6 +3,6 @@ description = Content for SiteNow Articles Feature
 core = 7.x
 package = SiteNow Content
 php = 5.2.4
-version = 7.x-1.0
+version = 7.x-1.1
 project = sitenow_articles_content
 files[] = sitenow_articles_content.migrate.inc
