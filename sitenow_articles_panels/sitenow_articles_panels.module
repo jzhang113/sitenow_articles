@@ -28,10 +28,10 @@ function sitenow_articles_panels_default_page_manager_pages() {
   $page->path = 'articles/!month';
   $page->access = array();
   $page->menu = array(
-    'type' => 'none',
-    'title' => '',
+    'type' => 'normal',
+    'title' => 'Articles',
     'name' => 'main-menu',
-    'weight' => '0',
+    'weight' => '2',
     'parent' => array(
       'type' => 'none',
       'title' => '',
