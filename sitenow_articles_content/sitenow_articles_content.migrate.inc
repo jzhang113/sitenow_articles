@@ -65,6 +65,7 @@ class SiteNowArticlesMigration extends Migration {
     // Author mapping. Defaults to user 1.
     $this->addFieldMapping('uid', 'uid')->defaultValue(1);
     $this->addFieldMapping('is_new', 'is_new')->defaultValue(TRUE);
+    $this->addFieldMapping('promote', 'promote')->defaultValue(FALSE);
   }
 
   // Function for the CSV document
@@ -76,6 +77,7 @@ class SiteNowArticlesMigration extends Migration {
     $columns[3] = array('image', 'Image');
     $columns[4] = array('image_alt', 'Image Alt');
     $columns[5] = array('image_title', 'Image title');
+    $columns[6] = array('promote', 'Promote');
     return $columns;
   }
 }
