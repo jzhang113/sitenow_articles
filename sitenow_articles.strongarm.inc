@@ -14,7 +14,7 @@ function sitenow_articles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_article';
-  $strongarm->value = 'edit-panelizer';
+  $strongarm->value = 'edit-xmlsitemap';
   $export['additional_settings__active_tab_article'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -161,8 +161,23 @@ function sitenow_articles_strongarm() {
   $strongarm->name = 'panelizer_defaults_node_article';
   $strongarm->value = array(
     'status' => 1,
-    'default' => 1,
-    'choice' => 0,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => 1,
+        'default' => 1,
+        'choice' => 0,
+      ),
+      'default' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'teaser' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+    ),
   );
   $export['panelizer_defaults_node_article'] = $strongarm;
 
@@ -172,6 +187,16 @@ function sitenow_articles_strongarm() {
   $strongarm->name = 'pathauto_node_article_pattern';
   $strongarm->value = 'article/[node:title]';
   $export['pathauto_node_article_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_article';
+  $strongarm->value = array(
+    'status' => '1',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_article'] = $strongarm;
 
   return $export;
 }

@@ -89,7 +89,7 @@ function sitenow_articles_node_info() {
       'description' => t('Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'),
       'has_title' => '1',
       'title_label' => t('Title'),
-      'help' => t('The title of the <em>article</em> will be listed in the article views as a link. Some views allow you filter articles on the <em>Promoted to front page</em> checkbox below. See the <a href="/admin/apps/sitenow/sitenow_articles/configure">demo content</a> for an example.'),
+      'help' => '',
     ),
   );
   return $items;
