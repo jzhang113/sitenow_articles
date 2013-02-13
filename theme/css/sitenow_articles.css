@@ -4,25 +4,3 @@
  *
  * - styles related for basic theming of sitenow_articles. Color and other customizations should take place at a higher level
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/modules\/features\/sitenow_articles\/theme\/sass\/sitenow_articles\.scss}line{font-family:\0000315}}
-.view-articles .views-row {
-  overflow: hidden;
-  *zoom: 1;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/modules\/features\/sitenow_articles\/theme\/sass\/sitenow_articles\.scss}line{font-family:\0000319}}
-.view-articles .views-field-field-image-1 {
-  float: left;
-  margin-right: 20px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/modules\/features\/sitenow_articles\/theme\/sass\/sitenow_articles\.scss}line{font-family:\0000324}}
-.view-articles .views-field-title {
-  margin: 0 0 .5em;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/modules\/features\/sitenow_articles\/theme\/sass\/sitenow_articles\.scss}line{font-family:\0000328}}
-.view-articles .views-field-created {
-  margin: 0 0 .5em;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/modules\/features\/sitenow_articles\/theme\/sass\/sitenow_articles\.scss}line{font-family:\0000331}}
-.view-articles .views-field-created .views-label-created {
-  font-weight: bold;
-}
