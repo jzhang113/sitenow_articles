@@ -11,4 +11,12 @@
 
 
 .view-articles {
+  .views-row {
+    @include cf;
+  }
+
+  .views-field-field-image-1 {
+    float: left;
+    margin-right: 1.3em;
+  }
 }

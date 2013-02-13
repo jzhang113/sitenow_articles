@@ -4,3 +4,14 @@
  *
  * - styles related for basic theming of sitenow_articles. Color and other customizations should take place at a higher level
  */
+/* line 14, ../sass/sitenow_articles.scss */
+.view-articles .views-row {
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1;
+}
+/* line 18, ../sass/sitenow_articles.scss */
+.view-articles .views-field-field-image-1 {
+  float: left;
+  margin-right: 1.3em;
+}
