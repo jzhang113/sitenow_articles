@@ -67,5 +67,4 @@ features[variable][] = panelizer_defaults_node_article
 features[variable][] = pathauto_node_article_pattern
 features[variable][] = xmlsitemap_settings_node_article
 features[views_view][] = articles
-features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][page_manager] = page_manager
