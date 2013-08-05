@@ -41,10 +41,10 @@ function sitenow_articles_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '180',
-          'height' => '180',
+          'width' => 180,
+          'height' => 180,
         ),
-        'weight' => '1',
+        'weight' => 1,
       ),
     ),
   );
@@ -63,10 +63,10 @@ function sitenow_articles_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '350',
-          'height' => '200',
+          'width' => 350,
+          'height' => 200,
         ),
-        'weight' => '1',
+        'weight' => 1,
       ),
     ),
   );
