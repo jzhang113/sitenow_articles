@@ -13,42 +13,56 @@ function sitenow_articles_user_default_permissions() {
   // Exported permission: 'administer panelizer node article content'.
   $permissions['administer panelizer node article content'] = array(
     'name' => 'administer panelizer node article content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node article context'.
   $permissions['administer panelizer node article context'] = array(
     'name' => 'administer panelizer node article context',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node article defaults'.
   $permissions['administer panelizer node article defaults'] = array(
     'name' => 'administer panelizer node article defaults',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node article layout'.
   $permissions['administer panelizer node article layout'] = array(
     'name' => 'administer panelizer node article layout',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node article overview'.
   $permissions['administer panelizer node article overview'] = array(
     'name' => 'administer panelizer node article overview',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
   // Exported permission: 'administer panelizer node article settings'.
   $permissions['administer panelizer node article settings'] = array(
     'name' => 'administer panelizer node article settings',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'panelizer',
   );
 
