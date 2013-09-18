@@ -28,6 +28,7 @@ function sitenow_articles_image_default_styles() {
 
   // Exported image style: articles_img_left.
   $styles['articles_img_left'] = array(
+    'label' => 'articles_img_left',
     'name' => 'articles_img_left',
     'effects' => array(
       1 => array(
@@ -50,6 +51,7 @@ function sitenow_articles_image_default_styles() {
 
   // Exported image style: articles_img_top.
   $styles['articles_img_top'] = array(
+    'label' => 'articles_img_top',
     'name' => 'articles_img_top',
     'effects' => array(
       2 => array(
