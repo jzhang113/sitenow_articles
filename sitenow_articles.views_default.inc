@@ -72,19 +72,14 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['fields']['created']['ui_name'] = 'Published Date';
   $handler->display->display_options['fields']['created']['label'] = 'Published On';
   $handler->display->display_options['fields']['created']['date_format'] = 'long';
-  /* Field: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['ui_name'] = 'Body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['text'] = '[body]';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '200';
-  $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'Continue Reading';
-  $handler->display->display_options['fields']['body']['alter']['more_link_path'] = 'node/[nid]';
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['field_article_body']['id'] = 'field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['table'] = 'field_data_field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['field'] = 'field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['label'] = '';
+  $handler->display->display_options['fields']['field_article_body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_article_body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['field_article_body']['settings'] = array(
     'trim_length' => '350',
   );
   /* Sort criterion: Content: Post date */
@@ -156,21 +151,14 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['fields']['created']['ui_name'] = 'Published Date';
   $handler->display->display_options['fields']['created']['label'] = 'Published On';
   $handler->display->display_options['fields']['created']['date_format'] = 'long';
-  /* Field: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['ui_name'] = 'Body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['text'] = '[body]';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '200';
-  $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'Continue Reading';
-  $handler->display->display_options['fields']['body']['alter']['more_link_path'] = 'node/[nid]';
-  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<a> <em> <strong> <span>';
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['field_article_body']['id'] = 'field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['table'] = 'field_data_field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['field'] = 'field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['label'] = '';
+  $handler->display->display_options['fields']['field_article_body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_article_body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['field_article_body']['settings'] = array(
     'trim_length' => '350',
   );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -251,15 +239,13 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Field: Content: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
+  $handler->display->display_options['fields']['field_article_body']['id'] = 'field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['table'] = 'field_data_field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['field'] = 'field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['label'] = '';
+  $handler->display->display_options['fields']['field_article_body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_article_body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['field_article_body']['settings'] = array(
     'trim_length' => '300',
   );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
