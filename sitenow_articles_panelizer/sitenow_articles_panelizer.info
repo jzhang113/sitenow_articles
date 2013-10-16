@@ -1,7 +1,0 @@
-name = SiteNow Articles Panelizer
-description = Articles panelizer defaults for SiteNow Standard Service
-core = 7.x
-package = SiteNow
-php = 5.2.4
-version = 7.x-1.0
-project = sitenow_articles_panelizer

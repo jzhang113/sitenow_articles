@@ -5,19 +5,9 @@
  */
 
 /**
- * Implements hook_ctools_plugin_api().
- */
-function sitenow_articles_panelizer_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
-  if ($module == "panelizer" && $api == "panelizer") {
-    return array("version" => "1");
-  }
-}
-
-/**
  * Implements hook_panelizer_defaults().
  */
-function sitenow_articles_panelizer_panelizer_defaults() {
+function sitenow_articles_panelizer_defaults() {
   $export = array();
 
   $panelizer = new stdClass();
