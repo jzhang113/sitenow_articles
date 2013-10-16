@@ -151,10 +151,11 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['fields']['created']['ui_name'] = 'Published Date';
   $handler->display->display_options['fields']['created']['label'] = 'Published On';
   $handler->display->display_options['fields']['created']['date_format'] = 'long';
-  /* Field: Content: Body */
+  /* Field: Body (summary or trimmed) */
   $handler->display->display_options['fields']['field_article_body']['id'] = 'field_article_body';
   $handler->display->display_options['fields']['field_article_body']['table'] = 'field_data_field_article_body';
   $handler->display->display_options['fields']['field_article_body']['field'] = 'field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['ui_name'] = 'Body (summary or trimmed)';
   $handler->display->display_options['fields']['field_article_body']['label'] = '';
   $handler->display->display_options['fields']['field_article_body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_article_body']['type'] = 'text_summary_or_trimmed';
@@ -220,28 +221,32 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Featured Image */
+  /* Field: Featured Image (180x180) */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['ui_name'] = 'Featured Image (180x180)';
   $handler->display->display_options['fields']['field_image']['label'] = '';
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'square_thumbnail',
+    'image_style' => 'articles_img_left',
     'image_link' => 'content',
   );
-  /* Field: Content: Title */
+  /* Field: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['ui_name'] = 'Title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Body */
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Body (summary or trimmed) */
   $handler->display->display_options['fields']['field_article_body']['id'] = 'field_article_body';
   $handler->display->display_options['fields']['field_article_body']['table'] = 'field_data_field_article_body';
   $handler->display->display_options['fields']['field_article_body']['field'] = 'field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['ui_name'] = 'Body (summary or trimmed)';
   $handler->display->display_options['fields']['field_article_body']['label'] = '';
   $handler->display->display_options['fields']['field_article_body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_article_body']['type'] = 'text_summary_or_trimmed';
@@ -337,6 +342,47 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['title'] = 'Article Listing';
   $handler->display->display_options['display_description'] = 'Listing for Articles Panel Page';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Featured Image (180x180) */
+  $handler->display->display_options['fields']['field_image_1']['id'] = 'field_image_1';
+  $handler->display->display_options['fields']['field_image_1']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image_1']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image_1']['ui_name'] = 'Featured Image (180x180)';
+  $handler->display->display_options['fields']['field_image_1']['label'] = '';
+  $handler->display->display_options['fields']['field_image_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image_1']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image_1']['settings'] = array(
+    'image_style' => 'articles_img_left',
+    'image_link' => 'content',
+  );
+  /* Field: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['ui_name'] = 'Title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Published Date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['ui_name'] = 'Published Date';
+  $handler->display->display_options['fields']['created']['label'] = 'Published On';
+  $handler->display->display_options['fields']['created']['date_format'] = 'long';
+  /* Field: Body (summary or trimmed) */
+  $handler->display->display_options['fields']['field_article_body']['id'] = 'field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['table'] = 'field_data_field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['field'] = 'field_article_body';
+  $handler->display->display_options['fields']['field_article_body']['ui_name'] = 'Body (summary or trimmed)';
+  $handler->display->display_options['fields']['field_article_body']['label'] = '';
+  $handler->display->display_options['fields']['field_article_body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_article_body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['field_article_body']['settings'] = array(
+    'trim_length' => '350',
+  );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Optional Date - Month Year */
   $handler->display->display_options['arguments']['created_year_month']['id'] = 'created_year_month';

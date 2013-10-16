@@ -28,10 +28,29 @@ function sitenow_articles_image_default_styles() {
 
   // Exported image style: articles_img_left.
   $styles['articles_img_left'] = array(
-    'label' => 'articles_img_left',
     'name' => 'articles_img_left',
+    'label' => 'Article (180x180)',
     'effects' => array(
-      1 => array(
+      6 => array(
+        'label' => 'Crop and scale manually',
+        'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
+        'effect callback' => 'manualcrop_crop_and_scale_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'manualcrop_crop_and_scale_form',
+        'summary theme' => 'manualcrop_crop_and_scale_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 180,
+          'height' => 180,
+          'upscale' => 1,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'articles_img_left',
+        ),
+        'weight' => 0,
+      ),
+      5 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -51,10 +70,29 @@ function sitenow_articles_image_default_styles() {
 
   // Exported image style: articles_img_top.
   $styles['articles_img_top'] = array(
-    'label' => 'articles_img_top',
     'name' => 'articles_img_top',
+    'label' => 'Article (350x200)',
     'effects' => array(
-      2 => array(
+      8 => array(
+        'label' => 'Crop and scale manually',
+        'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
+        'effect callback' => 'manualcrop_crop_and_scale_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'manualcrop_crop_and_scale_form',
+        'summary theme' => 'manualcrop_crop_and_scale_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 350,
+          'height' => 200,
+          'upscale' => 1,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'articles_img_top',
+        ),
+        'weight' => 0,
+      ),
+      7 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
