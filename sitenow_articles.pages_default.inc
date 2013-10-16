@@ -90,7 +90,7 @@ function sitenow_articles_default_page_manager_pages() {
         'field_image_1' => 1,
         'title' => 1,
         'created' => 0,
-        'body' => 1,
+        'field_article_body' => 1,
       ),
       'override_title' => 0,
       'override_title_text' => '',
