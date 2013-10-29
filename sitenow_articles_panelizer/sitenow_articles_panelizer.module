@@ -103,13 +103,14 @@ function sitenow_articles_panelizer_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'image',
+      'formatter' => 'file_rendered',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
         'image_style' => 'articles_img_top',
         'image_link' => '',
+        'file_view_mode' => 'article_350x200',
       ),
       'context' => 'panelizer',
       'override_title' => 0,
