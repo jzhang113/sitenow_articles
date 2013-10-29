@@ -130,9 +130,9 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['fields']['field_image_1']['label'] = '';
   $handler->display->display_options['fields']['field_image_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image_1']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image_1']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_image_1']['settings'] = array(
-    'image_style' => 'articles_img_left',
-    'image_link' => 'content',
+    'file_view_mode' => 'article_180x180',
   );
   /* Field: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -229,9 +229,9 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['fields']['field_image']['label'] = '';
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'articles_img_left',
-    'image_link' => 'content',
+    'file_view_mode' => 'article_180x180',
   );
   /* Field: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -351,9 +351,9 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['fields']['field_image_1']['label'] = '';
   $handler->display->display_options['fields']['field_image_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image_1']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image_1']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_image_1']['settings'] = array(
-    'image_style' => 'articles_img_left',
-    'image_link' => 'content',
+    'file_view_mode' => 'article_180x180',
   );
   /* Field: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';

@@ -13,6 +13,7 @@ dependencies[] = override_node_options
 dependencies[] = panelizer
 dependencies[] = sitenow_articles_panelizer
 dependencies[] = sitenow_articles_panels
+dependencies[] = sitenow_entity_view_modes
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
