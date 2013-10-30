@@ -190,6 +190,20 @@ function sitenow_articles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:article_allowed_layouts_default';
+  $strongarm->value = 1;
+  $export['panelizer_node:article_allowed_layouts_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:article_allowed_types_default';
+  $strongarm->value = 1;
+  $export['panelizer_node:article_allowed_types_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_article_pattern';
   $strongarm->value = 'article/[node:title]';
   $export['pathauto_node_article_pattern'] = $strongarm;
