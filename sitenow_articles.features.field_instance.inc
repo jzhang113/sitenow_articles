@@ -129,16 +129,10 @@ function sitenow_articles_field_default_field_instances() {
         'manualcrop_require_cropping' => array(
           'articles_img_left' => 0,
           'articles_img_top' => 0,
-          'featured_slider' => 0,
-          'person_large' => 0,
-          'person_small__100x100' => 0,
         ),
         'manualcrop_styles_list' => array(
           'articles_img_left' => 'articles_img_left',
           'articles_img_top' => 'articles_img_top',
-          'featured_slider' => 0,
-          'person_large' => 0,
-          'person_small__100x100' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
