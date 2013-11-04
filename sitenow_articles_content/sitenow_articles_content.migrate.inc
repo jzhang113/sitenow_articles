@@ -50,7 +50,7 @@ class SiteNowArticlesMigration extends Migration {
 
     // Bring on the field mappings
     $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('body', 'body')
+    $this->addFieldMapping('field_article_body', 'body')
      ->arguments(array('format' => 'filtered_html'));
     // Copy an image file, write DB record to files table, and save in Field storage.
     // We map the filename (relative to the source_dir below) to the field itself.
