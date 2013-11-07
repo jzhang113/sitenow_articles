@@ -10,6 +10,7 @@ apps[description] = Enables the option to add a content area to the site for pos
 apps[server] = local
 apps[local] = 1
 apps[logo] = apps/logo.png
+apps[screenshots][] = apps/screenshot.png
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = image
