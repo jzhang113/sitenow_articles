@@ -78,63 +78,64 @@ function sitenow_articles_panels_default_page_manager_pages() {
       'default' => NULL,
       'sidebar' => NULL,
       'contentmain' => NULL,
+      'first' => NULL,
+      'second' => NULL,
     ),
   );
   $display->cache = array();
   $display->title = 'Articles';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-1';
-    $pane->panel = 'first';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'articles-panel_pane_articles_page';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'use_pager' => 1,
-      'pager_id' => '0',
-      'items_per_page' => '10',
-      'fields_override' => array(
-        'field_image_1' => 1,
-        'title' => 1,
-        'created' => 0,
-        'field_article_body' => 1,
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['first'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'second';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'articles-panel_pane_articles_achive_links';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['second'][0] = 'new-2';
+  $pane = new stdClass();
+  $pane->pid = 'new-1';
+  $pane->panel = 'first';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'articles-articles_teaser';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'more_link' => 1,
+    'use_pager' => 0,
+    'pager_id' => '0',
+    'items_per_page' => '5',
+    'exposed' => array(
+      'promote' => '1',
+    ),
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-1'] = $pane;
+  $display->panels['first'][0] = 'new-1';
+  $pane = new stdClass();
+  $pane->pid = 'new-2';
+  $pane->panel = 'second';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'articles-articles_monthly_archive_links';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'items_per_page' => '5',
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-2'] = $pane;
+  $display->panels['second'][0] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -142,5 +143,4 @@ function sitenow_articles_panels_default_page_manager_pages() {
   $pages['articles'] = $page;
 
   return $pages;
-
 }
