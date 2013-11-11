@@ -275,6 +275,8 @@ function sitenow_articles_views_default_views() {
 
   /* Display: Grid */
   $handler = $view->new_display('panel_pane', 'Grid', 'articles_grid');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'views-grid';
   $handler->display->display_options['display_description'] = 'Teaser of articles in grid view';
   $handler->display->display_options['link_url'] = 'articles';
   $handler->display->display_options['defaults']['fields'] = FALSE;
