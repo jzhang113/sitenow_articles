@@ -7,3 +7,18 @@
 include_once 'sitenow_articles.features.inc';
 
 drupal_add_css(drupal_get_path('module', 'sitenow_articles') . '/theme/css/sitenow_articles.css');
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function sitenow_articles_form_ctools_entity_field_content_type_formatter_styles_alter(&$form, &$form_state, $form_id) {
+  // We want to act only on the Featured Image (field_image) field.
+  if ($form['ctools_field_list']['#value'][0]['field_name'] == 'field_image') {
+    // Restrict the view mode options to the entity view modes correspinding to
+    // the manual crop options available for this field.
+    $form['file_view_mode']['#options'] = array(
+      'article_180x180' => 'Article (180x180)',
+      'article_350x200' => 'Article (350x200)',
+    );
+  }
+}
