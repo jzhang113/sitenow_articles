@@ -6,6 +6,7 @@ version = 7.x-1.0
 project = sitenow_articles
 dependencies[] = ctools
 dependencies[] = features
+dependencies[] = file_entity
 dependencies[] = image
 dependencies[] = media
 dependencies[] = node

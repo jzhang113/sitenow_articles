@@ -22,7 +22,7 @@ function sitenow_articles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'ical' => array(
         'label' => 'above',
@@ -69,9 +69,12 @@ function sitenow_articles_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'articles_teaser',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 0,
       ),
       'ical' => array(
         'label' => 'above',
@@ -168,7 +171,7 @@ function sitenow_articles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'ical' => array(
         'label' => 'above',
