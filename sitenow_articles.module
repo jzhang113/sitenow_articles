@@ -6,8 +6,6 @@
 
 include_once 'sitenow_articles.features.inc';
 
-drupal_add_css(drupal_get_path('module', 'sitenow_articles') . '/theme/css/sitenow_articles.css');
-
 /**
  * Implements hook_form_FORM_ID_alter().
  */
