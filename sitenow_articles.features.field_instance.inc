@@ -65,7 +65,7 @@ function sitenow_articles_field_default_field_instances() {
   $field_instances['node-article-field_image'] = array(
     'bundle' => 'article',
     'deleted' => 0,
-    'description' => 'Featured Image is image associated to this article that is used across your website. Featured Image is not automatically inserted into your article, but can be placed using the media browser in your WYSIWYG. ',
+    'description' => 'This image is associated to this article and is used across your website. It is not automatically inserted into the body of your article, but it can be placed in the body using the media browser in the WYSIWYG.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -209,7 +209,7 @@ function sitenow_articles_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Featured Image');
-  t('Featured Image is image associated to this article that is used across your website. Featured Image is not automatically inserted into your article, but can be placed using the media browser in your WYSIWYG. ');
+  t('This image is associated to this article and is used across your website. It is not automatically inserted into the body of your article, but it can be placed in the body using the media browser in the WYSIWYG.');
   t('Provide keywords to relate content. Multiple values are allowed. Separate keywords with a comma.');
   t('Tags');
 
