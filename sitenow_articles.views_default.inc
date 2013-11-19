@@ -178,9 +178,37 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['filters']['promote']['value'] = '0';
   $handler->display->display_options['filters']['promote']['exposed'] = TRUE;
   $handler->display->display_options['filters']['promote']['expose']['operator_id'] = '';
-  $handler->display->display_options['filters']['promote']['expose']['label'] = 'Display only articles that have been "Promoted to front page"';
+  $handler->display->display_options['filters']['promote']['expose']['label'] = 'Filter by promoted to front';
+  $handler->display->display_options['filters']['promote']['expose']['description'] = 'Optionally display people marked promoted to front';
   $handler->display->display_options['filters']['promote']['expose']['operator'] = 'promote_op';
   $handler->display->display_options['filters']['promote']['expose']['identifier'] = 'promote';
+  $handler->display->display_options['filters']['promote']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    5 => 0,
+    3 => 0,
+  );
+  /* Filter criterion: Content: Tags (field_tags) */
+  $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
+  $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
+  $handler->display->display_options['filters']['field_tags_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_tags_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['operator_id'] = 'field_tags_tid_op';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['label'] = 'Filter by tags';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['description'] = 'Optionally display articles with tag(s)';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['operator'] = 'field_tags_tid_op';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['identifier'] = 'field_tags_tid';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    5 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
   $handler->display->display_options['pane_title'] = 'Articles teaser list';
   $handler->display->display_options['pane_description'] = 'Teaser article listing';
   $handler->display->display_options['pane_category']['name'] = 'Articles';
@@ -241,6 +269,59 @@ function sitenow_articles_views_default_views() {
     'article' => 'article',
   );
   $handler->display->display_options['arguments']['nid']['not'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
+  );
+  /* Filter criterion: Content: Promoted to front page */
+  $handler->display->display_options['filters']['promote']['id'] = 'promote';
+  $handler->display->display_options['filters']['promote']['table'] = 'node';
+  $handler->display->display_options['filters']['promote']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['promote']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['promote']['expose']['label'] = 'Filter by promoted to front';
+  $handler->display->display_options['filters']['promote']['expose']['description'] = 'Optionally display people marked promoted to front';
+  $handler->display->display_options['filters']['promote']['expose']['operator'] = 'promote_op';
+  $handler->display->display_options['filters']['promote']['expose']['identifier'] = 'promote';
+  $handler->display->display_options['filters']['promote']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    5 => 0,
+    3 => 0,
+  );
+  /* Filter criterion: Content: Tags (field_tags) */
+  $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
+  $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
+  $handler->display->display_options['filters']['field_tags_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_tags_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['operator_id'] = 'field_tags_tid_op';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['label'] = 'Filter by tags';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['description'] = 'Optionally display articles with tag(s)';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['operator'] = 'field_tags_tid_op';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['identifier'] = 'field_tags_tid';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    5 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
   $handler->display->display_options['pane_title'] = 'Articles simple list';
   $handler->display->display_options['pane_description'] = 'Title listing of articles by post date';
   $handler->display->display_options['pane_category']['name'] = 'Articles';
@@ -252,7 +333,7 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['allow']['more_link'] = 'more_link';
   $handler->display->display_options['allow']['path_override'] = 0;
   $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'tid' => array(
@@ -331,6 +412,59 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['arguments']['created_year_month']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['created_year_month']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['created_year_month']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
+  );
+  /* Filter criterion: Content: Promoted to front page */
+  $handler->display->display_options['filters']['promote']['id'] = 'promote';
+  $handler->display->display_options['filters']['promote']['table'] = 'node';
+  $handler->display->display_options['filters']['promote']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['promote']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['promote']['expose']['label'] = 'Filter by promoted to front';
+  $handler->display->display_options['filters']['promote']['expose']['description'] = 'Optionally display people marked promoted to front';
+  $handler->display->display_options['filters']['promote']['expose']['operator'] = 'promote_op';
+  $handler->display->display_options['filters']['promote']['expose']['identifier'] = 'promote';
+  $handler->display->display_options['filters']['promote']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    5 => 0,
+    3 => 0,
+  );
+  /* Filter criterion: Content: Tags (field_tags) */
+  $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
+  $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
+  $handler->display->display_options['filters']['field_tags_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_tags_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['operator_id'] = 'field_tags_tid_op';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['label'] = 'Filter by tags';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['description'] = 'Optionally display articles with tag(s)';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['operator'] = 'field_tags_tid_op';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['identifier'] = 'field_tags_tid';
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_tags_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    5 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
   $handler->display->display_options['pane_title'] = 'Articles grid list';
   $handler->display->display_options['pane_description'] = 'Listing for Articles Panel Page';
   $handler->display->display_options['pane_category']['name'] = 'Articles';
@@ -342,7 +476,7 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['allow']['more_link'] = 'more_link';
   $handler->display->display_options['allow']['path_override'] = 0;
   $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'created_year_month' => array(

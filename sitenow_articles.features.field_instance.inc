@@ -209,9 +209,9 @@ function sitenow_articles_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Featured Image');
-  t('This image is associated to this article and is used across your website. It is not automatically inserted into the body of your article, but it can be placed in the body using the media browser in the WYSIWYG.');
   t('Provide keywords to relate content. Multiple values are allowed. Separate keywords with a comma.');
   t('Tags');
+  t('This image is associated to this article and is used across your website. It is not automatically inserted into the body of your article, but it can be placed in the body using the media browser in the WYSIWYG.');
 
   return $field_instances;
 }
