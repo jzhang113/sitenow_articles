@@ -100,6 +100,7 @@ function sitenow_articles_panels_default_page_manager_pages() {
       'items_per_page' => '5',
       'exposed' => array(
         'promote' => 'All',
+        'field_tags_tid' => '',
       ),
       'override_title' => 0,
       'override_title_text' => '',
@@ -127,7 +128,9 @@ function sitenow_articles_panels_default_page_manager_pages() {
       'override_title_text' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
