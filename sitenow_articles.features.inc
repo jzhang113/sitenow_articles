@@ -69,7 +69,7 @@ function sitenow_articles_image_default_styles() {
     'name' => 'articles_teaser',
     'label' => 'Articles Teaser',
     'effects' => array(
-      8 => array(
+      1 => array(
         'label' => 'Reuse a Manual Crop selection',
         'help' => 'Reuse a crop selection from another Manual Crop enabled image style.',
         'effect callback' => 'manualcrop_reuse_effect',
@@ -83,7 +83,7 @@ function sitenow_articles_image_default_styles() {
         ),
         'weight' => 0,
       ),
-      9 => array(
+      2 => array(
         'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'image_scale_effect',
@@ -93,7 +93,7 @@ function sitenow_articles_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
-          'width' => 650,
+          'width' => 500,
           'height' => '',
           'upscale' => 0,
         ),
