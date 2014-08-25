@@ -65,7 +65,7 @@ function sitenow_articles_field_default_field_instances() {
   $field_instances['node-article-field_image'] = array(
     'bundle' => 'article',
     'deleted' => 0,
-    'description' => 'This image is associated to this article and is used across your website. It is not automatically inserted into the body of your article, but it can be placed in the body using the media browser in the WYSIWYG.<br>Uploaded images will be displayed using a 3:2 aspect ratio. Suggested minimum dimensions for an uploaded image are 500x333 pixels.',
+    'description' => 'This image is associated to this article and is used across your website. It is not automatically inserted into the body of your article, but it can be placed in the body using the media browser in the WYSIWYG.<br>Uploaded images will be displayed using a 3:2 aspect ratio. Suggested minimum dimensions for an uploaded image are 500 (width) x 333 (height) pixels.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -203,7 +203,7 @@ function sitenow_articles_field_default_field_instances() {
   t('Featured Image');
   t('Provide keywords to relate content. Multiple values are allowed. Separate keywords with a comma.');
   t('Tags');
-  t('This image is associated to this article and is used across your website. It is not automatically inserted into the body of your article, but it can be placed in the body using the media browser in the WYSIWYG.<br>Uploaded images will be displayed using a 3:2 aspect ratio. Suggested minimum dimensions for an uploaded image are 500x333 pixels.');
+  t('This image is associated to this article and is used across your website. It is not automatically inserted into the body of your article, but it can be placed in the body using the media browser in the WYSIWYG.<br>Uploaded images will be displayed using a 3:2 aspect ratio. Suggested minimum dimensions for an uploaded image are 500 (width) x 333 (height) pixels.');
 
   return $field_instances;
 }
