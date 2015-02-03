@@ -6,7 +6,7 @@
 
 function sitenow_articles_content_enable() {
   // Ensure that migration classes are registered.
-  migrate_get_module_apis(TRUE);
+  Migration::registerMigration('SiteNowArticlesMigration', 'SiteNowArticles');
 
   // Import the content
   $classes = array('SiteNowArticles');
