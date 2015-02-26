@@ -31,8 +31,8 @@ function sitenow_articles_image_default_styles() {
     'name' => 'articles_grid',
     'label' => 'Articles Grid',
     'effects' => array(
-      6 => array(
-        'label' => 'Reuse a Manual Crop selection',
+      15 => array(
+        'label' => 'Manual Crop: Reuse cropped style',
         'help' => 'Reuse a crop selection from another Manual Crop enabled image style.',
         'effect callback' => 'manualcrop_reuse_effect',
         'form callback' => 'manualcrop_reuse_form',
@@ -40,12 +40,11 @@ function sitenow_articles_image_default_styles() {
         'module' => 'manualcrop',
         'name' => 'manualcrop_reuse',
         'data' => array(
-          'reusestyle' => 'crop_selection_rectangle_3-2',
-          'style_name' => 'article_grid_image',
+          'reuse_crop_style' => 'crop_selection_rectangle_3-2',
         ),
         'weight' => 0,
       ),
-      7 => array(
+      16 => array(
         'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'image_scale_effect',
@@ -119,5 +118,6 @@ function sitenow_articles_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }
