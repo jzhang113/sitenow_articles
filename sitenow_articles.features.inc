@@ -68,8 +68,8 @@ function sitenow_articles_image_default_styles() {
     'name' => 'articles_teaser',
     'label' => 'Articles Teaser',
     'effects' => array(
-      1 => array(
-        'label' => 'Reuse a Manual Crop selection',
+      3 => array(
+        'label' => 'Manual Crop: Reuse cropped style',
         'help' => 'Reuse a crop selection from another Manual Crop enabled image style.',
         'effect callback' => 'manualcrop_reuse_effect',
         'form callback' => 'manualcrop_reuse_form',
@@ -77,12 +77,11 @@ function sitenow_articles_image_default_styles() {
         'module' => 'manualcrop',
         'name' => 'manualcrop_reuse',
         'data' => array(
-          'reusestyle' => 'crop_selection_rectangle_3-2',
-          'style_name' => 'articles_teaser',
+          'reuse_crop_style' => 'crop_selection_rectangle_3-2',
         ),
         'weight' => 0,
       ),
-      2 => array(
+      4 => array(
         'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'image_scale_effect',
