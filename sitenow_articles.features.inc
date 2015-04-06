@@ -28,16 +28,9 @@ function sitenow_articles_image_default_styles() {
 
   // Exported image style: articles_grid.
   $styles['articles_grid'] = array(
-    'name' => 'articles_grid',
     'label' => 'Articles Grid',
     'effects' => array(
       13 => array(
-        'label' => 'Manual Crop: Reuse cropped style',
-        'help' => 'Reuse a crop selection from another Manual Crop enabled image style.',
-        'effect callback' => 'manualcrop_reuse_effect',
-        'form callback' => 'manualcrop_reuse_form',
-        'summary theme' => 'manualcrop_reuse_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_reuse',
         'data' => array(
           'reuse_crop_style' => 'crop_selection_rectangle_3-2',
@@ -45,13 +38,6 @@ function sitenow_articles_image_default_styles() {
         'weight' => 0,
       ),
       15 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 500,
@@ -64,16 +50,9 @@ function sitenow_articles_image_default_styles() {
 
   // Exported image style: articles_teaser.
   $styles['articles_teaser'] = array(
-    'name' => 'articles_teaser',
     'label' => 'Articles Teaser',
     'effects' => array(
       16 => array(
-        'label' => 'Manual Crop: Reuse cropped style',
-        'help' => 'Reuse a crop selection from another Manual Crop enabled image style.',
-        'effect callback' => 'manualcrop_reuse_effect',
-        'form callback' => 'manualcrop_reuse_form',
-        'summary theme' => 'manualcrop_reuse_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_reuse',
         'data' => array(
           'reuse_crop_style' => 'crop_selection_rectangle_3-2',
@@ -81,13 +60,6 @@ function sitenow_articles_image_default_styles() {
         'weight' => 0,
       ),
       18 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 500,
