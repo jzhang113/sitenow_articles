@@ -208,6 +208,7 @@ function sitenow_articles_views_default_views() {
     5 => 0,
     3 => 0,
   );
+  $handler->display->display_options['filters']['field_tags_tid']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
   $handler->display->display_options['pane_title'] = 'Articles teaser list';
   $handler->display->display_options['pane_description'] = 'Teaser article listing';
@@ -321,6 +322,7 @@ function sitenow_articles_views_default_views() {
     5 => 0,
     3 => 0,
   );
+  $handler->display->display_options['filters']['field_tags_tid']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
   $handler->display->display_options['pane_title'] = 'Articles simple list';
   $handler->display->display_options['pane_description'] = 'Title listing of articles by post date';
@@ -464,6 +466,7 @@ function sitenow_articles_views_default_views() {
     5 => 0,
     3 => 0,
   );
+  $handler->display->display_options['filters']['field_tags_tid']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
   $handler->display->display_options['pane_title'] = 'Articles grid list';
   $handler->display->display_options['pane_description'] = 'Listing for Articles Panel Page';
