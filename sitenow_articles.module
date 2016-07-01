@@ -15,8 +15,51 @@ function sitenow_articles_form_ctools_entity_field_content_type_formatter_styles
     // Restrict the view mode options to the entity view modes correspinding to
     // the manual crop options available for this field.
     $form['file_view_mode']['#options'] = array(
-      'articles_grid' => 'Article (500x333)',
-      'articles_teaser' => 'Article (650x433)',
+      'articles_grid' => t('Article (500x333)'),
+      'articles_teaser' => t('Article (650x433)'),
     );
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function sitenow_articles_preprocess_views_view(&$vars) {
+  if ($vars['view']->name == 'articles') {
+    if ($vars['view']->display_handler->options['pane_conf']['sitenow_articles_feed_icon'] == 0) {
+      unset($vars['feed_icon']);
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function sitenow_articles_form_views_content_views_panes_content_type_edit_form_alter(&$form, &$form_state, $form_id) {
+  $view = $form_state['view'];
+  if ($view->name == 'articles') {
+    $conf = $form_state['conf'];
+
+    $form['sitenow_articles_feed_icon'] = array(
+      '#type' => 'checkbox',
+      '#description' => t('Whether or not to show an RSS feed icon. The feed will use the filters set in this pane. Links to the unfiltered feed can be found on the SiteNow Articles !link.', array('!link' => l(t('configuration page'), 'admin/apps/local/sitenow_articles/configure'))),
+      '#title' => t('Display RSS icon'),
+      '#default_value' => $conf['sitenow_articles_feed_icon'],
+    );
+
+    array_unshift($form['#submit'], 'sitenow_articles_views_panes_content_type_edit_form_submit');
+  }
+}
+
+/**
+ * Store form values in $conf.
+ */
+function sitenow_articles_views_panes_content_type_edit_form_submit(&$form, &$form_state) {
+  $keys = array('sitenow_articles_feed_icon');
+
+  foreach ($keys as $key) {
+    if (isset($form_state['values'][$key])) {
+      $form_state['conf'][$key] = $form_state['values'][$key];
+    }
   }
 }
