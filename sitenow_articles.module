@@ -15,8 +15,8 @@ function sitenow_articles_form_ctools_entity_field_content_type_formatter_styles
     // Restrict the view mode options to the entity view modes correspinding to
     // the manual crop options available for this field.
     $form['file_view_mode']['#options'] = array(
-      'articles_grid' => 'Article (500x333)',
-      'articles_teaser' => 'Article (650x433)',
+      'articles_grid' => t('Article (500x333)'),
+      'articles_teaser' => t('Article (650x433)'),
     );
   }
 }
