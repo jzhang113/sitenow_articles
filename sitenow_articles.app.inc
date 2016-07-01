@@ -1,5 +1,10 @@
 <?php
 /**
+ * @file
+ * App configuration.
+ */
+
+/**
  * Implements hook_apps_app_info().
  */
 function sitenow_articles_apps_app_info() {
