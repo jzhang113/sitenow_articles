@@ -530,6 +530,22 @@ function sitenow_articles_views_default_views() {
   $handler->display->display_options['arguments']['created_year_month']['summary_options']['override'] = TRUE;
   $handler->display->display_options['arguments']['created_year_month']['summary_options']['items_per_page'] = '30';
   $handler->display->display_options['arguments']['created_year_month']['specify_validation'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
+  );
   $handler->display->display_options['pane_title'] = 'Articles monthly archive links';
   $handler->display->display_options['pane_description'] = 'Links for Monthly Archive on Articles Panel Page';
   $handler->display->display_options['pane_category']['name'] = 'Articles';
